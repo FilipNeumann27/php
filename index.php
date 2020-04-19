@@ -7,24 +7,55 @@
     <body>
         <?php
       
-        $a = 5;
-        $b = 7;
-                
-        var_dump ($a-$b);
-        var_dump ($a/$b);
-        var_dump ($a*$b);
+        $a=5;
+        $b=7;
+        $str = "čau";
+        $ahoj = 'Dobrý den';
+        $string = 'kobliha';
         
-        var_dump ($a==$b);
-        var_dump ($a>$b);
-        var_dump ($a<$b);
+       echo var_dump ($a+$b);         
+       echo var_dump ($a-$b);
+       echo var_dump ($a/$b);
+       echo var_dump ($a*$b);
+       
+       echo var_dump ($a==$b);
+       echo var_dump ($a===$b);
+       echo var_dump ($a>$b);
+       echo var_dump ($a<$b);
+       echo var_dump ('ahoj');
+       echo var_dump ($str);
+       
+       var_dump (print $a+$b);         
+       var_dump (print $a-$b);
+       var_dump (print $a/$b);
+       var_dump (print $a*$b);
+       
+       var_dump (print $a==$b); 
+       var_dump (print $a===$b);
+       var_dump (print $a>$b);
+       var_dump (print $a<$b);
+       var_dump (print 'ahoj');
+       var_dump (print "$str");
+       
+       var_dump (<<<POZDRAV
+       $ahoj, jak se máte?
+       Dobře a vy?
+       POZDRAV);
+       
+       //kombinování stringů
+       var_dump ($ahoj.=' máte otevřeno?');
+       var_dump ($str.=$string);
+      
+       //obrázek
+       echo '<img src="obrazekphp.jpg" width="100px" length="100px" alt="obrazek" title="obraz">';
+            
+       
+       
+       $auta = array ("audi", "skoda", "volkswagen");
+       echo var_dump ($auta);
         
         
-        
-        $auta = array ("audi", "skoda", "volkswagen");
-        var_dump ($auta);
-        
-        
-        
+        //vlastní funkce dph
         $cena_bez_dph=100;
         $dph=1.21;
         $mena='CZK';
@@ -37,7 +68,7 @@
         return $cena_s_dph. " " . $mena;
         }
         
-        var_dump ($cena_s_dph);
+        echo var_dump ($cena_s_dph);
         
         
         
@@ -50,4 +81,5 @@
         ?>
     </body>
 </html>
+
 
