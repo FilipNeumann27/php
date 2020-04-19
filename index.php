@@ -37,6 +37,8 @@
        var_dump (print 'ahoj');
        var_dump (print "$str");
        
+       echo "\\";
+       
        var_dump (<<<POZDRAV
        $ahoj, jak se máte?
        Dobře a vy?
@@ -81,5 +83,4 @@
         ?>
     </body>
 </html>
-
 
