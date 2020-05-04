@@ -14,7 +14,13 @@
         $string = 'kobliha';
         $FilipNeumann1 = 1;
         $FilipNeumann2 = 3;
+        
+        include('C:\wamp64\www\php/tracy.phar');
+        
+        use Tracy\Debugger;
 
+        Tracy\Debugger::enable();
+        
         
         if ($FilipNeumann1===1){
            echo"Neumann Filip";
@@ -102,7 +108,7 @@
        
        echo "\\";
        
-       var_dump (<<<POZDRAV
+       dump(<<<POZDRAV
        $ahoj, jak se máte?
        Dobře a vy?
        POZDRAV);
