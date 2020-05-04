@@ -7,6 +7,12 @@
     <body>
         <?php
       
+        require 'tracy/tracy.phar';
+        use Tracy\Debugger;
+        Debugger::enable();
+        Debugger::$strictMode = true;
+        
+        
         $a=5;
         $b=7;
         $str = "čau";
@@ -15,11 +21,6 @@
         $FilipNeumann1 = 1;
         $FilipNeumann2 = 3;
         
-        include('C:\wamp64\www\php/tracy.phar');
-        
-        use Tracy\Debugger;
-
-        Tracy\Debugger::enable();
         
         
         if ($FilipNeumann1===1){
@@ -82,29 +83,29 @@
         
         
         
-       echo var_dump ($a+$b);         
-       echo var_dump ($a-$b);
-       echo var_dump ($a/$b);
-       echo var_dump ($a*$b);
+       echo dump ($a+$b);         
+       echo dump ($a-$b);
+       echo dump ($a/$b);
+       echo dump ($a*$b);
        
-       echo var_dump ($a==$b);
-       echo var_dump ($a===$b);
-       echo var_dump ($a>$b);
-       echo var_dump ($a<$b);
-       echo var_dump ('ahoj');
-       echo var_dump ($str);
+       echo dump ($a==$b);
+       echo dump ($a===$b);
+       echo dump ($a>$b);
+       echo dump ($a<$b);
+       echo dump ('ahoj');
+       echo dump ($str);
        
-       var_dump (print $a+$b);         
-       var_dump (print $a-$b);
-       var_dump (print $a/$b);
-       var_dump (print $a*$b);
+       dump (print $a+$b);         
+       dump (print $a-$b);
+       dump (print $a/$b);
+       dump (print $a*$b);
        
-       var_dump (print $a==$b); 
-       var_dump (print $a===$b);
-       var_dump (print $a>$b);
-       var_dump (print $a<$b);
-       var_dump (print 'ahoj');
-       var_dump (print "$str");
+       dump (print $a==$b); 
+       dump (print $a===$b);
+       dump (print $a>$b);
+       dump (print $a<$b);
+       dump (print 'ahoj');
+       dump (print "$str");
        
        echo "\\";
        
@@ -114,8 +115,8 @@
        POZDRAV);
        
        //kombinování stringů
-       var_dump ($ahoj.=' máte otevřeno?');
-       var_dump ($str.=$string);
+       dump ($ahoj.=' máte otevřeno?');
+       dump ($str.=$string);
        
        echo '<p/>';
       
@@ -138,7 +139,7 @@
         return $cena_s_dph. " " . $mena;
         }
         
-        echo var_dump ($cena_s_dph);
+        echo dump ($cena_s_dph);
         
         
         
