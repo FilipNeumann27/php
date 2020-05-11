@@ -9,8 +9,7 @@
       
         require 'tracy/tracy.phar';
         use Tracy\Debugger;
-        Debugger::enable();
-        Debugger::$strictMode = true;
+        
         
         
         $a=5;
@@ -20,6 +19,9 @@
         $string = 'kobliha';
         $FilipNeumann1 = 1;
         $FilipNeumann2 = 3;
+        $i=0;
+        $radekFilipNeumann=4;
+        $sloupecFilipNeumann=17;
         
         
         
@@ -81,9 +83,71 @@
        
         echo'<p/>';
         
+        for ($i=0; $i<10; $i++) {
+           echo "ahoj<br>";
+        }
+        
+        echo'<p/>';
         
         
-       echo dump ($a+$b);         
+        
+        for ($sloupecFilipNeumann=0; $sloupecFilipNeumann<4; $sloupecFilipNeumann++) {    
+           
+        for ($radekFilipNeumann=0; $radekFilipNeumann<17; $radekFilipNeumann++){
+                
+         
+            
+            }
+        }
+        
+        echo'<p/>';
+        
+        //matematické funkce
+        echo round (45.7);
+        echo'<p/>';
+        echo pi();
+        
+        echo'<p/>';
+        
+        //řetězcové funkce
+        echo md5 ($string);
+        echo'<p/>';
+        echo ucfirst ($string);
+        
+        echo'<p/>';
+        
+        //funkce polí
+        echo pos ($znackyaut);
+        echo'<p/>';
+        echo rsort ($znackyaut);
+        
+        echo'<p/>';
+        
+        //foreach
+        foreach ($znackyaut as $value) {
+        echo 1,$value,"<br>" ;
+}
+        
+        echo'<p/>';
+        
+        //vlastní funkce
+        $cena_bez_dph=65;
+        $dph=1.21;
+        $mena='CZK';
+        $cena_s_dph=$cena_bez_dph*$dph;
+     
+        function cena ($cena_bez_dph, $dph, $mena){
+        $cena_s_dph = $ceba_bez_dph*$dph;
+        $cena_s_dph = round ($cena_s_dph, 2);
+        $cena_s_dph = number_format ($cena_s_dph, 2, '.', ',');
+        return $cena_s_dph. " " . $mena;
+        }
+        
+        echo dump ($cena_s_dph);
+        
+        die;
+       
+        echo dump ($a+$b);         
        echo dump ($a-$b);
        echo dump ($a/$b);
        echo dump ($a*$b);
@@ -126,20 +190,7 @@
        echo '<p/>';
         
         
-        //vlastní funkce dph
-        $cena_bez_dph=100;
-        $dph=1.21;
-        $mena='CZK';
-        $cena_s_dph=$cena_bez_dph*$dph;
-     
-        function cena ($cena_bez_dph, $dph, $mena){
-        $cena_s_dph = $ceba_bez_dph*$dph;
-        $cena_s_dph = round ($cena_s_dph, 2);
-        $cena_s_dph = number_format ($cena_s_dph, 2, '.', ',');
-        return $cena_s_dph. " " . $mena;
-        }
         
-        echo dump ($cena_s_dph);
         
         
         
@@ -153,4 +204,3 @@
         ?>
     </body
     </html>
-
